@@ -5,12 +5,14 @@ namespace MetalheadGame
 {
     public class LocomotionController : MonoBehaviour
     {
-        public bool IsGrounded => _characterController.isGrounded;
-        public float VerticalVelocity { get; private set; }
+        
         
         [Header("Components")]
         [SerializeField] private CharacterController _characterController;
 
+        public bool IsGrounded => _characterController.isGrounded;
+        public float VerticalVelocity { get; private set; }
+        
         [Header("Movement")]
         [SerializeField] private float _walkSpeed = 2.4f;
         [SerializeField] private float _runSpeed = 6.5f;
